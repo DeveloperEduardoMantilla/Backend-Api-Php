@@ -10,38 +10,30 @@
 
         /*public function __construct(){
             $this->host="172.16.48.204";
-            $this->user="sputik";
+            $this->user="sputnik";
             $this->password="Sp3tn1kC@";
-            $this->db="campuslands";
+            $this->db="campusland";
+            $this->port="3306";
+            $this->driver="mysql"; 
+        }*/
+        public function __construct(){
+            $this->host="127.0.0.1";
+            $this->user="root";
+            $this->password="";
+            $this->db="campusland";
             $this->port="3306";
             $this->driver="mysql"; 
         }
         
         public function connect(){
-            $conexion ="mysql:host=".$this->host.";dbname=".$this->db."; charset=utf8";
-            $atributos=[PDO::ATTR_ERRMODE => PDO::ERRRMODE_EXCEPTION];
-            $objConexion= new PDO($conexion, $this->user,$this->password,$atributos);
-            return $objConexion;
-        }*/
-
-        function __construct()     {     
-            $this->host="172.16.48.204";
-            $this->user="sputnik";
-            $this->password="Sp3tn1kC@";
-            $this->db="campusland";
-            $this->port="3306";
-            $this->driver="mysql";    
-            try {             
-                $this->conx = new PDO($this->driver . ":host=" . $this->host. ";port=" . $this->port . "; dbname=" . $this->db . "; user=" . $this->user . "; password=" . $this->password);             
-                $this->conx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);             
-                echo "ok";         
-            } catch (PDOException $error) {             
-                echo "No me pude conectar" . $error->getMessage();         
-            }     
+            try{   
+            $this->objConexion= new PDO($_ENV["DB_DRIVER"].":host=".$_ENV["DB_HOST"].";port=".$_ENV["DB_PORT"].";dbname=".$_ENV["DB_DATABASE"]."; user=".$_ENV["DB_USERNAME"]."; password=".$_ENV["DB_PASSWORD"]);
+            $this->objConexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
+            return "Conexion Establecida";
+        }catch(PDOExpception $e){
+                echo "Fallo la conexion a la base de datos =>"+$e->getMessage();      
+            }
         }
-    }
 
-    $obj = new Connection();
-    $bd=$obj->connect();
-    var_dump($bd);
+    }
 ?>
