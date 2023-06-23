@@ -4,5 +4,8 @@
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 
-    echo "Hola Mundo";
+    require_once "app/controllers/routes.controller.php";
+
+    $index = new RoutesController();
+    $index->index();
 ?>
