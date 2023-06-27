@@ -121,3 +121,43 @@ A continuación se enumeran los endpoints disponibles en esta API:
 - (POST) http://localhost/Backend-Api-Php/position => Guarda datos en la tabla position
 - (PUT) http://localhost/Backend-Api-Php/position/{id} => Actualiza datos de la tabla position
 - (DELETE) http://localhost/Backend-Api-Php/position/{id} => Elimina datos de la tabla position
+
+## themes
+
+- (GET) http://localhost/Backend-Api-Php/themes => Obtiene datos de la tabla themes
+- (GET) http://localhost/Backend-Api-Php/themes/{id} => Obtiene un dato de la tabla themes mediante su ID
+- (POST) http://localhost/Backend-Api-Php/themes => Guarda datos en la tabla themes
+- (PUT) http://localhost/Backend-Api-Php/themes/{id} => Actualiza datos de la tabla themes
+- (DELETE) http://localhost/Backend-Api-Php/themes/{id} => Elimina datos de la tabla themes
+
+## modules
+
+- (GET) http://localhost/Backend-Api-Php/modules => Obtiene datos de la tabla modules
+- (GET) http://localhost/Backend-Api-Php/modules/{id} => Obtiene un dato de la tabla modules mediante su ID
+- (POST) http://localhost/Backend-Api-Php/modules => Guarda datos en la tabla modules
+- (PUT) http://localhost/Backend-Api-Php/modules/{id} => Actualiza datos de la tabla modules
+- (DELETE) http://localhost/Backend-Api-Php/modules/{id} => Elimina datos de la tabla modules
+
+## topics
+
+- (GET) http://localhost/Backend-Api-Php/topics => Obtiene datos de la tabla topics
+- (GET) http://localhost/Backend-Api-Php/topics/{id} => Obtiene un dato de la tabla topics mediante su ID
+- (POST) http://localhost/Backend-Api-Php/topics => Guarda datos en la tabla topics
+- (PUT) http://localhost/Backend-Api-Php/topics/{id} => Actualiza datos de la tabla topics
+- (DELETE) http://localhost/Backend-Api-Php/topics/{id} => Elimina datos de la tabla topics
+
+## chapters
+
+- (GET) http://localhost/Backend-Api-Php/chapters => Obtiene datos de la tabla chapters
+- (GET) http://localhost/Backend-Api-Php/chapters/{id} => Obtiene un dato de la tabla chapters mediante su ID
+- (POST) http://localhost/Backend-Api-Php/chapters => Guarda datos en la tabla chapters
+- (PUT) http://localhost/Backend-Api-Php/chapters/{id} => Actualiza datos de la tabla chapters
+- (DELETE) http://localhost/Backend-Api-Php/chapters/{id} => Elimina datos de la tabla chapters
+
+## thematic_units
+
+- (GET) http://localhost/Backend-Api-Php/thematic_units => Obtiene datos de la tabla thematic_units
+- (GET) http://localhost/Backend-Api-Php/thematic_units/{id} => Obtiene un dato de la tabla thematic_units mediante su ID
+- (POST) http://localhost/Backend-Api-Php/thematic_units => Guarda datos en la tabla thematic_units
+- (PUT) http://localhost/Backend-Api-Php/thematic_units/{id} => Actualiza datos de la tabla thematic_units
+- (DELETE) http://localhost/Backend-Api-Php/thematic_units/{id} => Elimina datos de la tabla thematic_units
