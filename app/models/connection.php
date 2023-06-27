@@ -1,4 +1,10 @@
 <?php 
+    namespace proyectoApi\models;
+    
+    use PDO;
+
+    use PDOException;
+
     class Connection
     {
         private $host;
@@ -8,14 +14,6 @@
         private $port;
         private $driver;
 
-        /*public function __construct(){
-            $this->host="172.16.48.40";
-            $this->user="sputnik";
-            $this->password="Sp3tn1kC@";
-            $this->db="campusland";
-            $this->port="3306";
-            $this->driver="mysql"; 
-        }*/
         public function __construct(){
             $this->host=$_ENV["DB_HOST"];
             $this->user=$_ENV["DB_USERNAME"];
@@ -25,7 +23,7 @@
             $this->driver=$_ENV["DB_DRIVER"]; 
         }
         
-        public function connect(){
+        public function connect():PDO{
             try{   
                $conexion = new PDO($this->driver.":host=".$this->host.";port=".$this->port.";dbname=".$this->db."; user=".$this->user."; password=".$this->password);
                $conexion->exec("set names utf8");

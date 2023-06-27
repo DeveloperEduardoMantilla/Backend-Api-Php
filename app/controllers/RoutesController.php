@@ -1,8 +1,9 @@
 <?php 
+    namespace proyectoApi\controllers;
 
     class RoutesController{
-
-        public function index(){
+        
+        static public function index(){
             include "app/routes/routes.php";
         }
 
